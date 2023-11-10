@@ -1,0 +1,16 @@
+{
+  "name": "css-styled-components-converter",
+  "version": "1.0.0",
+  "description": "CSS to Styled-Components converter",
+  "main": "index.js",
+  "scripts": {
+    "extract": "node cssParser.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ricardo Malnati",
+  "license": "MIT",
+  "dependencies": {
+    "cssom": "^0.5.0"
+  }
+}

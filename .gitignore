@@ -1,3 +1,5 @@
+*.enc
+
 # Logs
 logs
 *.log
