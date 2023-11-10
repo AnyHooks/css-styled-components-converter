@@ -11,6 +11,7 @@
   "author": "Ricardo Malnati",
   "license": "MIT",
   "dependencies": {
+    "css-select": "^5.1.0",
     "cssom": "^0.5.0"
   }
 }
