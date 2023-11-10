@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "cssom": "node cssParser.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
-    "css-from-files": "node cssFromFiles.js bootstrap.min.txt 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/css/print-table.css?v=4.4.1 style-full.min.css' 'https://portaldatransparencia.gov.br/static/css/style-full.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/dataTables/select/select.bootstrap.min.css' 'https://portaldatransparencia.gov.br/static/js/graficos/graficos-full.min.js?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/bootstrap-multiselect/css/bootstrap-multiselect.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/tokeninput/token-input.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/font-awesome-4.4.0/css/font-awesome.min.css?v=4.4.1' 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800%7COpen+Sans+Condensed:700%7CRoboto+Condensed:400,700' 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1'" ,
+    "css-from-files": "node cssFromFiles.js bootstrap.min.txt 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/css/print-table.css?v=4.4.1 style-full.min.css' 'https://portaldatransparencia.gov.br/static/css/style-full.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/dataTables/select/select.bootstrap.min.css' 'https://portaldatransparencia.gov.br/static/js/graficos/graficos-full.min.js?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/bootstrap-multiselect/css/bootstrap-multiselect.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/tokeninput/token-input.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/font-awesome-4.4.0/css/font-awesome.min.css?v=4.4.1' 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800%7COpen+Sans+Condensed:700%7CRoboto+Condensed:400,700' 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1'",
     "css-from-url": "node cssFromURL.js bootstrap.min.txt 'https://portaldatransparencia.gov.br/beneficios/beneficiario/consulta?paginacaoSimples=true&tamanhoPagina=&offset=&direcaoOrdenacao=asc&ano=2023&tipoBeneficio=6&colunasSelecionadas=linkDetalhamento%2CnomeBeneficiario%2ClinguagemCidada%2CnisBeneficio%2CcpfBeneficiario%2Cmunicipio%2Cano%2Cvalor&ordenarPor=nomeBeneficiario&direcao=asc'",
+    "css-crawler": "cssCrawler.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,6 +18,7 @@
     "cheerio": "^1.0.0-rc.12",
     "css": "^3.0.0",
     "css-select": "^5.1.0",
-    "cssom": "^0.5.0"
+    "cssom": "^0.5.0",
+    "puppeteer": "^21.5.1"
   }
 }
