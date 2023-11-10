@@ -1,22 +1,28 @@
 const puppeteer = require('puppeteer');
 
 async function extractCSS(url) {
+  console.log(`Iniciando o Puppeteer para a URL: ${url}`);
   const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
   await page.goto(url);
+  console.log("Página carregada");
 
   // Extrair links de CSS
   const cssLinks = await page.evaluate(() => {
     const links = Array.from(document.querySelectorAll('link[rel="stylesheet"]'));
     return links.map(link => link.href);
   });
+  console.log(`Links de CSS encontrados: ${cssLinks.length}`);
 
   // Carregar e exibir o conteúdo CSS
   for (const link of cssLinks) {
+    console.log(`Carregando CSS de: ${link}`);
     const cssContent = await page.goto(link).then(response => response.text());
+    console.log(`Conteúdo CSS de ${link}:`);
     console.log(cssContent);
   }
 
+  console.log("Fechando o navegador");
   await browser.close();
 }
 
