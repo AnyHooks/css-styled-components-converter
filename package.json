@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "cssom": "node cssParser.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
-    "css-select": "node cssSelect.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
+    "css-select": "node cssSelect.js bootstrap.min.txt 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/css/print-table.css?v=4.4.1 style-full.min.css' 'https://portaldatransparencia.gov.br/static/css/style-full.min.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/dataTables/select/select.bootstrap.min.css' 'https://portaldatransparencia.gov.br/static/js/graficos/graficos-full.min.js?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/bootstrap-multiselect/css/bootstrap-multiselect.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/tokeninput/token-input.css?v=4.4.1' 'https://portaldatransparencia.gov.br/static/libs/font-awesome-4.4.0/css/font-awesome.min.css?v=4.4.1' 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800%7COpen+Sans+Condensed:700%7CRoboto+Condensed:400,700' 'https://portaldatransparencia.gov.br/static/libs/bootstrap/css/bootstrap.min.css?v=4.4.1'" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
