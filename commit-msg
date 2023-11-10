@@ -178,5 +178,5 @@ echo -e "$BODY" >> "commit-message.txt"
 git commit -F "commit-message.txt"
 rm -f "commit-message.txt"
 git fetch && git pull
-
+git push && git fetch && git pull
 exit 0
