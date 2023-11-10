@@ -11,13 +11,20 @@ const selectors = fs.readFileSync(process.argv[2], 'utf8').split('\n');
 
 // Process each selector
 selectors.forEach(selector => {
-  const result = cssSelect.selectOne(selector, parsedStyles.stylesheet.rules);
-  if (result) {
-    console.log(`Found: '${selector}'`);
-  } else {
-    console.log(`Not found: '${selector}'`);
-  }
-});
+    // Convert the string into a valid CSS selector
+    const validSelector = selector.replace('class="', '.').replace('"', '');
+  
+    try {
+      const result = cssSelect.selectOne(validSelector, parsedStyles.stylesheet.rules);
+      if (result) {
+        console.log(`Found: '${validSelector}'`);
+      } else {
+        console.log(`Not found: '${validSelector}'`);
+      }
+    } catch (error) {
+      console.error(`Error processing selector '${validSelector}': ${error.message}`);
+    }
+  });
 
 // Additional CSS file if needed
 const additionalCssContent = fs.readFileSync(process.argv[4], 'utf8');

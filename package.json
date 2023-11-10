@@ -4,13 +4,15 @@
   "description": "CSS to Styled-Components converter",
   "main": "index.js",
   "scripts": {
-    "extract": "node cssParser.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
+    "cssom": "node cssParser.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
+    "css-select": "node cssSelect.js bootstrap.min.txt bootstrap.min.css style-full.min.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "Ricardo Malnati",
   "license": "MIT",
   "dependencies": {
+    "css": "^3.0.0",
     "css-select": "^5.1.0",
     "cssom": "^0.5.0"
   }
